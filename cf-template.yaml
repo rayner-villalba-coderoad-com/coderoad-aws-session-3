@@ -16,16 +16,6 @@ Resources:
           FromPort: 8000
           ToPort: 8000
           CidrIp: 0.0.0.0/0
-  EC2Instance:
-    Type: AWS::EC2::Instance
-    Properties:
-      InstanceType: t3.micro
-      ImageId: ami-08d7aabbb50c2c24e
-      SecurityGroupIds:
-        - !Ref InstanceSecurityGroup
-      Tags:
-        - Key: Name
-          Value: CodeRoadC2Instance
   AnotherEC2Instance:
     Type: AWS::EC2::Instance
     Properties:
